@@ -32,7 +32,7 @@ export default class AddPatient extends Component {
             <View style={{ flex: 1 }}>
                 <Header>
                     <Left>
-                        <Icon name="arrow-back" iconColor="white" onPress={() => Actions.all_patient()} />
+                        <Icon style={{color:'white'}} name="arrow-back" iconColor="white" onPress={() => Actions.all_patient()} />
                     </Left>
                     <Body>
                         <Title>
@@ -44,6 +44,10 @@ export default class AddPatient extends Component {
                 <Form>
                     <Item floatingLabel>
                         <Label>Patient Name</Label>
+                        {/* <Text>
+                        <Icon style={{color:"rgb(36,81,181)"}} name="ios-people" />                        
+                        </Text> */}
+                        
                         <Input onChangeText={(name) => this.setState({ name })} />
                     </Item>
                     <Item floatingLabel>

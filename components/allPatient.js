@@ -61,16 +61,21 @@ class AllPatient extends Component {
         let myList;
         if (this.props.patientDetail) {
             myList = this.props.patientDetail.filter(this.randomSearch).map((data, index) => {
-                return <ListItem key={index} >
+                return <ListItem key={index} itemDivider>
                 <Left>
                 <Icon name="ios-people" />
-                </Left>
-                    <Body>
+                    {/* <Body> */}
                         <Text >{data.name}</Text>
-                    </Body>
+                    {/* </Body> */}
+                </Left>
+                    
                     <Right>
 
-                        <Text style={{color:'blue'}} onPress={this.detail.bind(this, index)}>View</Text>
+                        <Text style={{color:"rgb(36,81,181)"}} onPress={this.detail.bind(this, index)}>View</Text>
+                    </Right>
+                    <Right>
+
+                        <Text style={{color:'red'}} onPress={this.delete.bind(this, index)}>Delete</Text>
                     </Right>
                 </ListItem>
 

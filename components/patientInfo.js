@@ -6,12 +6,12 @@ import PatientMiddleware from "../store/middlewares/patientMiddleware.js"
 
 export default class PatientInfo extends Component {
  
-    delete(index) {
+    // delete(index) {
         
-        // return dispatch(PatientMiddleware.asyncDeletePatient(index))
-        this.props.deleteIndex(index)
-        Actions.all_patient()
-        }
+    //     // return dispatch(PatientMiddleware.asyncDeletePatient(index))
+    //     this.props.deleteIndex(index)
+    //     Actions.all_patient()
+    //     }
 
 
     render() {
@@ -24,7 +24,7 @@ export default class PatientInfo extends Component {
             <View style={{ flex: 1 }}>
                 <Header>
                     <Left>
-                        <Icon name="arrow-back" iconColor="white" onPress={() => Actions.all_patient()} />
+                        <Icon style={{color:'white'}} name="arrow-back" iconColor="white" onPress={() => Actions.all_patient()} />
                     </Left>
                     <Body>
                         <Title>
@@ -61,7 +61,7 @@ export default class PatientInfo extends Component {
                                 <Text style={{fontSize:20}}>Dr. Name :</Text>
                             </Left>
                             <Body>
-                                <Text>{detail.doctorName}</Text>
+                                <Text>Dr.{detail.doctorName}</Text>
                             </Body>
 
                         </CardItem>
@@ -75,11 +75,11 @@ export default class PatientInfo extends Component {
 
                         </CardItem>
                     </Card>
-                    <Button onPress={this.delete.bind(this)} bordered block>
+                    {/* <Button onPress={this.delete.bind(this)} bordered block>
                         <Text>
                             Delete
                         </Text>
-                    </Button>
+                    </Button> */}
                 </Content>
             </View>
         )
